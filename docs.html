@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Документы | ФСБ RMRP</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <div class="logo">
+                <img src="FSB.png" alt="ФСБ Эмблема" class="logo-emblem">
+                <span>ФСБ RMRP</span>
+            </div>
+            <nav class="nav">
+                <a href="index.html">Главная</a>
+                <a href="about.html">О ведомстве</a>
+                <a href="/" class="active">Документы</a>
+                <a href="contacts.html">Контакты</a>
+                <a href="dresscode.html">Дресс-код</a>
+                <a href="academy.html">Академия ФСБ</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <h1 class="page-title">📄 Документы и приказы</h1>
+            <p class="intro-text">Архив официальных указов, постановлений и внутренних регламентов ведомства.</p>
+
+            <div class="docs-controls">
+                <input type="text" id="docSearch" placeholder="🔍 Поиск по названию или номеру...">
+                <select id="docFilter">
+                    <option value="all">📂 Все категории</option>
+                    <option value="приказ">📜 Приказы</option>
+                    <option value="устав">📖 Устав</option>
+                    <option value="акты">📋 Акты</option>
+                    <option value="таблица">📊 Таблица</option>
+                    <option value="законодательство">⚖️ Законодательство</option>
+                </select>
+            </div>
+
+            <div class="table-responsive">
+                <table class="structure-table docs-table">
+                    <thead><tr><th>№</th><th>Название</th><th>Категория</th><th>Действие</th></tr></thead>
+                    <tbody id="docsList">
+                        <!-- Устав -->
+                        <tr data-category="устав">
+                            <td>Устав</td>
+                            <td><a href="https://forum.rmrp.ru/threads/ufsb-vnutrennij-ustav.221971/" target="_blank" class="doc-link">📖 Внутренний устав УФСБ</a></td>
+                            <td><span class="rank-badge rank-charter">📖 Устав</span></td>
+                            <td><a href="https://forum.rmrp.ru/threads/ufsb-vnutrennij-ustav.221971/" target="_blank" class="btn btn-sm">Открыть</a></td>
+                        </tr>
+                        <!-- Таблица старшего состава -->
+                        <tr data-category="таблица">
+                            <td>Таблица</td>
+                            <td><a href="https://docs.google.com/spreadsheets/d/1gjVrDdsXGIrCLZb8E2Kml2uzMKDlCxd3tL16Lh_dfx0/edit?gid=0#gid=0" target="_blank" class="doc-link">📊 Таблица старшего состава</a></td>
+                            <td><span class="rank-badge rank-table">📊 Таблица</span></td>
+                            <td><a href="https://docs.google.com/spreadsheets/d/1gjVrDdsXGIrCLZb8E2Kml2uzMKDlCxd3tL16Lh_dfx0/edit?gid=0#gid=0" target="_blank" class="btn btn-sm">Перейти</a></td>
+                        </tr>
+                        <!-- Конституция РФ -->
+                        <tr data-category="законодательство">
+                            <td>—</td>
+                            <td><a href="https://forum.rmrp.ru/threads/konstitucija-rossijskoj-federacii.58232/" target="_blank" class="doc-link">Конституция Российской Федерации</a></td>
+                            <td><span class="rank-badge rank-legislation">⚖️ Законодательство</span></td>
+                            <td><a href="https://forum.rmrp.ru/threads/konstitucija-rossijskoj-federacii.58232/" target="_blank" class="btn btn-sm">Открыть</a></td>
+                        </tr>
+                        <!-- Закон о ФСБ -->
+                        <tr data-category="законодательство">
+                            <td>78-ФЗ</td>
+                            <td><a href="https://forum.rmrp.ru/threads/federalnyj-zakon-o-federalnoj-sluzhbe-bezopasnosti-no78-fz.25073/" target="_blank" class="doc-link">Федеральный закон «О Федеральной службе безопасности» №78-ФЗ</a></td>
+                            <td><span class="rank-badge rank-legislation">⚖️ Законодательство</span></td>
+                            <td><a href="https://forum.rmrp.ru/threads/federalnyj-zakon-o-federalnoj-sluzhbe-bezopasnosti-no78-fz.25073/" target="_blank" class="btn btn-sm">Открыть</a></td>
+                        </tr>
+                        <!-- Закон о гостайне -->
+                        <tr data-category="законодательство">
+                            <td>10-ФЗ</td>
+                            <td><a href="https://forum.rmrp.ru/threads/federalnyj-zakon-o-gosudarstvennoj-tajne-no10-fz.25062/" target="_blank" class="doc-link">Федеральный закон «О государственной тайне» №10-ФЗ</a></td>
+                            <td><span class="rank-badge rank-legislation">⚖️ Законодательство</span></td>
+                            <td><a href="https://forum.rmrp.ru/threads/federalnyj-zakon-o-gosudarstvennoj-tajne-no10-fz.25062/" target="_blank" class="btn btn-sm">Открыть</a></td>
+                        </tr>
+                        <!-- Закон о закрытых территориях -->
+                        <tr data-category="законодательство">
+                            <td>86-ФЗ</td>
+                            <td><a href="https://forum.rmrp.ru/threads/federalnyj-zakon-o-gosudarstvennoj-sobstvennosti-zakrytyx-i-oxranjaemyx-territorijax-no-86-fz.26625/" target="_blank" class="doc-link">ФЗ «О государственной собственности на закрытых и охраняемых территориях» №86-ФЗ</a></td>
+                            <td><span class="rank-badge rank-legislation">⚖️ Законодательство</span></td>
+                            <td><a href="https://forum.rmrp.ru/threads/federalnyj-zakon-o-gosudarstvennoj-sobstvennosti-zakrytyx-i-oxranjaemyx-territorijax-no-86-fz.26625/" target="_blank" class="btn btn-sm">Открыть</a></td>
+                        </tr>
+                        <!-- УК РФ -->
+                        <tr data-category="законодательство">
+                            <td>УК РФ</td>
+                            <td><a href="https://forum.rmrp.ru/threads/ugolovnyj-kodeks-rossijskoj-federacii.58209/" target="_blank" class="doc-link">Уголовный кодекс Российской Федерации</a></td>
+                            <td><span class="rank-badge rank-legislation">⚖️ Законодательство</span></td>
+                            <td><a href="https://forum.rmrp.ru/threads/ugolovnyj-kodeks-rossijskoj-federacii.58209/" target="_blank" class="btn btn-sm">Открыть</a></td>
+                        </tr>
+                        <!-- УПК РФ -->
+                        <tr data-category="законодательство">
+                            <td>УПК</td>
+                            <td><a href="https://forum.rmrp.ru/threads/ugolovno-processualnyj-kodeks-rossijskoj-federacii.90218/" target="_blank" class="doc-link">Уголовно-процессуальный кодекс Российской Федерации</a></td>
+                            <td><span class="rank-badge rank-legislation">⚖️ Законодательство</span></td>
+                            <td><a href="https://forum.rmrp.ru/threads/ugolovno-processualnyj-kodeks-rossijskoj-federacii.90218/" target="_blank" class="btn btn-sm">Открыть</a></td>
+                        </tr>
+                        <!-- КоАП РФ -->
+                        <tr data-category="законодательство">
+                            <td>КоАП</td>
+                            <td><a href="https://forum.rmrp.ru/threads/kodeks-ob-administrativnyx-pravonarushenijax-rossijskoj-federacii.58229/" target="_blank" class="doc-link">Кодекс об административных правонарушениях РФ</a></td>
+                            <td><span class="rank-badge rank-legislation">⚖️ Законодательство</span></td>
+                            <td><a href="https://forum.rmrp.ru/threads/kodeks-ob-administrativnyx-pravonarushenijax-rossijskoj-federacii.58229/" target="_blank" class="btn btn-sm">Открыть</a></td>
+                        </tr>
+                        <!-- Процессуальный кодекс -->
+                        <tr data-category="законодательство">
+                            <td>ПК</td>
+                            <td><a href="https://forum.rmrp.ru/threads/processualnyj-kodeks-rossijskoj-federacii.58424/" target="_blank" class="doc-link">Процессуальный кодекс Российской Федерации</a></td>
+                            <td><span class="rank-badge rank-legislation">⚖️ Законодательство</span></td>
+                            <td><a href="https://forum.rmrp.ru/threads/processualnyj-kodeks-rossijskoj-federacii.58424/" target="_blank" class="btn btn-sm">Открыть</a></td>
+                        </tr>
+                        <!-- Приказы в Discord -->
+                        <tr data-category="приказ">
+                            <td>Дискорд</td>
+                            <td><a href="https://discord.com/channels/882947763111854120/1354183763508068443" target="_blank" class="doc-link">📌 Канал с приказами руководства (Discord)</a></td>
+                            <td><span class="rank-badge rank-mid">📜 Приказы</span></td>
+                            <td><a href="https://discord.com/channels/882947763111854120/1354183763508068443" target="_blank" class="btn btn-sm">Перейти</a></td>
+                        </tr>
+                        <!-- Акты ФСБ - Discord -->
+                        <tr data-category="акты">
+                            <td>Дискорд</td>
+                            <td><a href="https://discord.com/channels/879285199639306340/930437746961575966" target="_blank" class="doc-link">📋 Акты ФСБ (Discord)</a></td>
+                            <td><span class="rank-badge rank-act">📋 Акты</span></td>
+                            <td><a href="https://discord.com/channels/879285199639306340/930437746961575966" target="_blank" class="btn btn-sm">Перейти</a></td>
+                        </tr>
+                        <!-- Акты ФСБ - Форум (Канцелярия) -->
+                        <tr data-category="акты">
+                            <td>Форум</td>
+                            <td><a href="https://forum.rmrp.ru/threads/ufsb-kanceljarija.14926/" target="_blank" class="doc-link">🏛️ Канцелярия (Форум RMRP)</a></td>
+                            <td><span class="rank-badge rank-act">📋 Акты</span></td>
+                            <td><a href="https://forum.rmrp.ru/threads/ufsb-kanceljarija.14926/" target="_blank" class="btn btn-sm">Открыть</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p id="noResults" style="display:none; text-align:center; padding:20px; color:#888;">Документы не найдены</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner"></div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
